@@ -37,3 +37,10 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+
+    - task: AzureRmWebAppDeployment@4
+      inputs:
+        ConnectionType: 'AzureRM'
+        azureSubscription: 'Kainskep Subscription 03 - Dattatrey(c81e8e46-58da-4db2-91db-453f9925991b)'
+        appType: 'webAppContainer'
+        WebAppName: 'sample-docker-web'
