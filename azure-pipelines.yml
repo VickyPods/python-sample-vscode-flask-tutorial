@@ -14,7 +14,7 @@ variables:
   imageRepository: 'vickypodspythonsamplevscodeflasktutorial'
   containerRegistry: 'vickyp.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
-  tag: '$(Build.BuildId)'
+  tag: 'latest'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -44,3 +44,8 @@ stages:
         azureSubscription: 'Kainskep Subscription 03 - Dattatrey(c81e8e46-58da-4db2-91db-453f9925991b)'
         appType: 'webAppContainer'
         WebAppName: 'sample-docker-web'
+        DockerNamespace: 'vickyp.azurecr.io'
+        DockerRepository: 'vickypodspythonsamplevscodeflasktutorial'
+        DockerImageTag: 'latest'
+        
+        
